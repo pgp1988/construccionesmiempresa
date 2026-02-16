@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
 import { Inicio } from "../components/main/Inicio";
 import { QuienesSomos } from "../components/about/QuienesSomos";
 import { Contacto } from "../components/contact/Contacto";
@@ -8,7 +8,7 @@ import { Servicios } from "../components/services/Servicios";
 export const AppRouter = () => {
   return (
     <>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/inicio" element={<Inicio />} />
         <Route path="/about" element={<QuienesSomos />} />
@@ -17,7 +17,7 @@ export const AppRouter = () => {
         <Route path="/servicios" element={<Servicios />} />
         <Route path="/contacto" element={<Contacto />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
     </>
   );
 };
