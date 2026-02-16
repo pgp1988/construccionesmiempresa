@@ -1,0 +1,1419 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll; 
+}
+
+body, html{
+    margin:0px;
+    padding:0px;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    background-color: #A3A3CC;
+}
+
+/* Cookies banner */
+
+.cookies{
+    height:100%;
+    width:100%;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index:1000;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cookiesMessage{
+    width:55%;
+    background-color:azure;
+    padding:10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.cookiesMessage h3{
+    margin:0;
+}
+
+.botonesCookies{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    gap:25px;
+
+}
+
+.botonesCookies button{
+
+    padding:15px;
+    color:white;
+
+}
+
+#aceptarCookies{
+    background-color: green;
+}
+
+#cancelarCookies{
+    background-color: red;
+}
+
+#aceptarCookies:hover, #cancelarCookies:hover{
+    background-color: purple;
+}
+
+/* Página de contacto */
+
+.gridtemplateContact{
+    display:grid;
+    grid-template-columns: repeat(10, auto);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+    "navBar navBar navBar navBar navBar navBar navBar navBar navBar navBar"
+    ". . . . formulario formulario . . . ."
+    ". . . . . . . . . ."
+    "footer footer footer footer footer footer footer footer footer footer";
+    width:100%;
+    min-height:100vh;
+    height:auto;
+    gap:10px;
+}
+
+#formulario{
+    grid-area: formulario;
+    align-self:center;
+    justify-self:center;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:center;
+    background-color: #5C5C99;
+    padding:1rem;
+}
+
+#formulario fieldset{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width:100%;
+}
+
+#datosPersonales{
+    margin-bottom:10px;
+}
+
+#formulario legend{
+    color:white;
+    background-color: #292966;
+    padding:10px;
+}
+
+#formulario label{
+    display:flex;
+    flex-direction: column;
+    color:white;
+    margin-bottom:10px;
+}
+
+#formulario input{
+    padding:10px;
+    width:350px;
+}
+
+#formulario input:focus{
+   outline:none;
+}
+
+#formulario textarea{
+  width: 100%;   
+  height: 150px;     
+  resize: none;      
+  overflow: auto;   
+  margin-bottom:10px; 
+}
+
+#formulario textarea:focus{
+  outline:none;   
+}
+
+#formulario button{
+    padding:15px;
+    background-color:blue;
+    color:white;
+    margin-top:1rem;
+    width: 25%;
+    border-radius:8px;
+}
+
+.errorStyle{
+    border-color:red;
+}
+
+
+/* Página "Nuestras Obras" */ 
+
+
+.gridtemplateProyects{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+    "navBar navBar navBar navBar navBar navBar navBar navBar navBar navBar"
+    ". . . . search search . . . ."
+    "gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery"
+    "footer footer footer footer footer footer footer footer footer footer";
+    width:100%;
+    min-height:100vh;
+    height: auto;
+    gap:10px;
+}
+
+.galleryGrid{
+    display:grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+    ". fImg1 . fImg2 . fImg3 . fImg4 ."
+    ". fImg5 . fImg6 . fImg7 . fImg8 ."
+    ". fImg9 . . . . . . .";
+    width:100%;
+    height:auto;
+    gap:10px;
+    grid-area: gallery;
+}
+
+.flexbox{
+    align-self: center;
+    justify-self: center;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-shrink: 1;
+    flex-wrap: wrap;
+    grid-area: gallery;
+    gap:10px;
+    width:100%;
+    box-sizing: border-box;
+}
+
+.psImg1{
+    grid-area: fImg1;
+    align-self:flex-start;
+    justify-self:center;
+    text-decoration:none;
+    color:black;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.psImg2{
+    grid-area: fImg2;
+    align-self:flex-start;
+    justify-self:center;
+    text-decoration:none;
+    color:black;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.psImg3{
+    grid-area: fImg3;
+    align-self:flex-start;
+    justify-self:center;
+    text-decoration:none;
+    color:black;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.psImg4{
+    grid-area: fImg4;
+    align-self:flex-start;
+    justify-self:center;
+    text-decoration:none;
+    color:black;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.psImg5{
+    grid-area: fImg5;
+    align-self:flex-start;
+    justify-self:center;
+    text-decoration:none;
+    color:black;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.psImg6{
+    grid-area: fImg6;
+    align-self:flex-start;
+    justify-self:center;
+    text-decoration:none;
+    color:black;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.psImg7{
+    grid-area: fImg7;
+    align-self:flex-start;
+    justify-self:center;
+    text-decoration:none;
+    color:black;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.psImg8{
+    grid-area: fImg8;
+    align-self:flex-start;
+    justify-self:center;
+    text-decoration:none;
+    color:black;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.psImg9{
+    grid-area: fImg9;
+    align-self:flex-start;
+    justify-self:center;
+    text-decoration:none;
+    color:black;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+#searchForm{
+    grid-area: search;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-width:100%;
+    justify-self: center;
+    align-self: center;
+}
+
+#searchForm > input{
+    padding:8px;
+    min-width: 100%;
+    border-radius:6px;
+    border: solid 1px black;
+}
+
+#searchForm > input:focus{
+    text-decoration: none;
+    outline:none;
+}
+
+/* Página de inicio */
+
+.gridtemplate{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+    "navBar navBar navBar navBar navBar navBar navBar navBar navBar navBar"
+    ". encabezado2 encabezado2 . encabezado1 encabezado1 . encabezado2b encabezado2b ."
+    ". p1 p1 . carousel carousel . p2 p2 ."
+    ". p1 p1 . . . . p2 p2 ."
+    ". atributos atributos . atributos3 atributos3 . atributos2 atributos2 ."
+    "footer footer footer footer footer footer footer footer footer footer";
+    width:100%;
+    min-height:100vh;
+    height:auto;
+    gap:10px;
+}
+
+.carousel{
+    width: 600px; 
+    height: 400px;
+    margin: 0 auto;
+    z-index:0 !important;
+}
+
+.carouselSwiperSlide{
+    width:600px;
+    height:400px;
+}
+
+.carouselSwiper{
+    width:600px;
+}
+
+
+.encabezado1{
+    grid-area: encabezado1;
+    text-align:center;
+}
+
+.encabezado2{
+    grid-area: encabezado2;
+    align-self:center;
+    justify-self:flex-start;
+}
+
+.encabezado2b{
+    grid-area: encabezado2b;
+    align-self:center;
+    justify-self:flex-start;
+}
+
+.p1{
+    grid-area:p1;
+    align-self:flex-start;
+    justify-self: flex-start;
+    margin:0;
+}
+
+.p2{
+    grid-area:p2;
+    align-self:flex-start;
+    justify-self: flex-start;
+    margin:0;
+}
+
+.carouselgrid{
+    grid-area: carousel;
+    justify-self:center;
+    align-self: flex-start;
+}
+
+/* Menú principal (NavBar) y Footer */
+
+.menubutton{
+    padding:10px;
+    background-color:#292966;
+    width: 150px;
+    color:white;
+    text-decoration:none;
+    position:relative;
+    border-radius: 8px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuItem{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#292966;
+    width: 150px;
+    border-radius: 8px;
+    position:relative;
+    z-index:1;
+}
+
+.menuItem a:not(.activa):hover{
+    transform: scale(1.1);
+}
+
+.listaBotones{
+    padding:0px;
+    list-style:none;
+    list-style-type: none;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+}
+
+.navBar{
+    width:100%;
+    height:auto;
+    grid-area: navBar;
+    align-self: flex-start;
+    justify-self: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#292966;
+    padding-top:20px;
+    padding-bottom:20px;
+    position:sticky;
+    top:0;
+    z-index:1;
+}
+
+.links-container{
+    height:100%;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+
+#sidebar-active{
+    display:none;
+}
+
+.open-sidebar-button{
+    display:none;
+}
+
+.close-sidebar-button{
+    display:none;
+}
+
+.footer{
+    grid-area: footer;
+    align-self: flex-end;
+    justify-self: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#292966;
+    color:white;
+    width:100%;
+    padding-top:20px;
+    padding-bottom:20px;
+    position:sticky;
+    bottom:0;
+}
+
+.footer img{
+    width:35px;
+    height:35px;
+}
+
+.footer img:hover{
+    transform:scale(1.1);
+}
+
+.footer li > a{
+    margin:0;
+    padding:0;
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.listaBotonesFooter{
+    padding:0px;
+    margin:0px;
+    list-style:none;
+    list-style-type: none;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+    width:33.333%;
+}
+
+.copyrightUL{
+    padding:0px;
+    margin-left:15px;
+    list-style:none;
+    list-style-type: none;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    width:33.333%;
+}
+
+.addressUL{
+    padding:0px;
+    margin-right:15px;
+    list-style:none;
+    list-style-type: none;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    width:33.333%;
+}
+
+
+/* Efectos (conic gradient) de los botones del menú principal */
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.activa{
+    background-color: #292966;
+}
+
+.activa::after, .activa::before{
+    content:'';
+    position:absolute;
+    height:100%;
+    width:100%;
+    background-image: conic-gradient(from var(--angle), transparent 30%,white);
+    top:50%;
+    left:50%;
+    translate: -50% -50%;
+    z-index:-1;
+    padding:1px;
+    border-radius:10px;
+    animation: 2s spin linear infinite;
+}
+
+.activa::before{
+    filter:blur(1.5rem);
+    opacity: 0.6;
+}
+
+@keyframes spin{
+    from{
+        --angle:0deg;
+    }
+    to{
+        --angle:360deg;
+    }
+}
+
+/* Créditos y atributos */
+
+.atributos{
+    grid-area: atributos;
+}
+
+.atributos2{
+    grid-area: atributos2;
+}
+
+.atributos3{
+    grid-area: atributos3;
+}
+
+/* Página Quienes Somos y leaflet */
+
+#map { 
+grid-area: mapa;
+height: 300px; 
+width: 500px;
+justify-self: flex-end;
+align-self: center ;
+
+}
+
+.mapContainer{
+    width:500px !important;
+    height:300px !important;
+}
+
+.gridtemplateAbout{
+    display:grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: min-content min-content min-content min-content min-content min-content min-content auto auto min-content;
+    grid-template-areas:
+    "navBar navBar navBar navBar navBar navBar navBar navBar navBar navBar"
+    ". companyHead companyHead companyHead . . h3map h3map h3map ."
+    ". companyDesc companyDesc companyDesc . . mapa mapa mapa ."
+    ". companyDesc companyDesc companyDesc . . mapa mapa mapa ."
+    ". companyDesc companyDesc companyDesc . . mapa mapa mapa ."
+    ". team team2 team3 . . h3mapVisita h3mapVisita h3mapVisita ."
+    ". team team2 team3 . . . . . ."
+    ". . . . . . . . . ."
+    ". . . . . . . . . ."
+    "footer footer footer footer footer footer footer footer footer footer";
+    width:100%;
+    min-height:100vh;
+    gap:10px;
+}
+
+.h3map{
+grid-area: h3map;
+justify-self:flex-start;
+align-self: flex-end;
+}
+
+.h3mapVisita{
+grid-area: h3mapVisita;
+}
+
+.pAddress{
+grid-area: pAddress;
+}
+
+.companyHeading{
+    grid-area: companyHead;
+}
+
+.companyDescription{
+    grid-area: companyDesc;
+    align-self: flex-start;
+    margin: 0;
+}
+
+.team1{
+    grid-area: team;
+    justify-self: center;
+}
+
+.team2{
+    grid-area: team2;
+}
+
+.team3{
+    grid-area: team3;
+}
+
+/* Página de servicios */
+
+.gridtemplateServices{
+    display:grid;
+    grid-template-columns: repeat(7, auto);
+    grid-template-rows: min-content auto min-content;
+    grid-template-areas:
+    "navBar navBar navBar navBar navBar navBar navBar"
+    "card card card card card card card"
+    "footer footer footer footer footer footer footer";
+    width:100%;
+    min-height:100vh;
+    gap:10px;
+}
+
+.card{
+    align-self:center;
+    grid-area: card;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    gap:20px;
+}
+
+
+.card001{
+    grid-area: card1;
+    align-self:flex-start;
+    justify-self:center;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: solid 1px black;
+    width: fit-content;
+    height: fit-content;
+}
+
+.card002{
+    grid-area: card2;
+    align-self:flex-start;
+    justify-self:center;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: solid 1px black;
+    width: fit-content;
+    height: fit-content;
+}
+
+.card003{
+    grid-area: card3;
+    align-self:flex-start;
+    justify-self:center;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: solid 1px black;
+    width: fit-content;
+    height: fit-content;
+}
+
+.card004{
+    grid-area: card4;
+    align-self:flex-start;
+    justify-self:center;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: solid 1px black;
+    width: fit-content;
+    height: fit-content;
+}
+
+.card005{
+    grid-area: card5;
+    align-self:flex-start;
+    justify-self:center;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: solid 1px black;
+    width: fit-content;
+    height: fit-content;
+}
+
+.cardHeading {
+    width:100%;
+    padding:10px;
+    border-bottom: solid 1px black;
+    background-color:#CCCCFF;
+}
+
+.cardHeading h3{
+    text-align: center;
+}
+
+.cardText{
+    width:100%;
+    padding:10px;
+    background-color:#5C5C99;
+    color:white;
+}
+
+
+/* Media Queries */
+
+@media(max-width:1485px){
+    .gridtemplateAbout{
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(12, min-content) auto min-content;
+    grid-template-areas:
+    "navBar navBar navBar navBar navBar"
+    ". companyHead companyHead companyHead ."
+    ". companyDesc companyDesc companyDesc ."
+    ". companyDesc companyDesc companyDesc ."
+    ". companyDesc companyDesc companyDesc ."
+    ". h3map h3map h3map ."
+    ". mapa mapa mapa ."
+    ". mapa mapa mapa ."
+    ". mapa mapa mapa ."
+    ". h3mapVisita h3mapVisita h3mapVisita ."
+    ". team team2 team3 ."
+    ". team team2 team3 ."
+    ". . . . ."
+    "footer footer footer footer footer";
+    width:100%;
+    min-height:100vh;
+    height:auto;
+    gap:10px;
+}
+
+#map { 
+grid-area: mapa;
+height: 300px; 
+width: 500px;
+justify-self: flex-start;
+align-self: center ;
+z-index:0;
+
+}
+
+
+}
+
+@media(max-width:1300px){
+    .gridtemplateProyects{
+    display:grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+    "navBar navBar navBar navBar navBar navBar navBar navBar navBar navBar"
+    ". . . search search search search . . ."
+    "gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery"
+    "footer footer footer footer footer footer footer footer footer footer";
+    width:100%;
+    min-height:100vh;
+    height: auto;
+    gap:10px;
+}
+
+.galleryGrid{
+    display:grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+    ". fImg1 . fImg2 . fImg3 ."
+    ". fImg4 . fImg5 . fImg6 ."
+    ". fImg7 . fImg8 . fImg9 .";
+    width:100%;
+    height:auto;
+    gap:10px;
+    grid-area: gallery;
+}
+
+.gridtemplate{
+    display:grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: repeat(11, min-content);
+    grid-template-areas:
+    "navBar navBar navBar"
+    ". encabezado1 ."
+    ". carousel ."
+    ". encabezado2 ."
+    ". p1 ."
+    ". encabezado2b ."
+    ". p2 ."
+    ". atributos ." 
+    ". atributos3 ."
+    ". atributos2 ."
+    "footer footer footer";
+    width:100%;
+    min-height:100vh;
+    height:auto;
+    gap:10px;
+}
+
+}
+
+@media(max-width:990px){
+
+    .links-container{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position:fixed;
+        top:0;
+        right:-100%;
+        width:250px;
+        height:480px;
+        z-index:1000;
+        background-color: #292966;
+        box-shadow: -5px 0 5px rgba(0,0,0,0.25);
+        transition: 0.75s ease-out;
+    }
+
+    .listaBotones{
+    padding:0px;
+    list-style:none;
+    list-style-type: none;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap:30px;
+    width:100%;
+    height:100%;
+}
+
+.open-sidebar-button{
+    display:block;
+    padding:20px;
+}
+
+.close-sidebar-button{
+    display:block;
+    padding:20px;
+}
+
+#sidebar-active:checked ~ .links-container{
+    right:0;
+}
+
+#sidebar-active:checked ~ #overlay{
+    height:100%;
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:999;
+}
+
+.navBar{
+    justify-content: flex-end;
+}
+
+    .gridtemplateProyects{
+    display:grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+    "navBar navBar navBar navBar navBar navBar navBar navBar navBar navBar"
+    ". . . search search search search . . ."
+    "gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery"
+    "footer footer footer footer footer footer footer footer footer footer";
+    width:100%;
+    min-height:100vh;
+    height: auto;
+    gap:10px;
+}
+
+.galleryGrid{
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+    ". fImg1 . fImg2 ."
+    ". fImg3 . fImg4 ."
+    ". fImg5 . fImg6 ."
+    ". fImg7 . fImg8 ."
+    ". fImg9 . . .";
+    width:100%;
+    height:auto;
+    gap:10px;
+    grid-area: gallery;
+}
+
+ .gridtemplateAbout{
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(13, min-content);
+    grid-template-areas:
+    "navBar navBar navBar navBar navBar"
+    ". companyHead companyHead companyHead ."
+    ". companyDesc companyDesc companyDesc ."
+    ". companyDesc companyDesc companyDesc ."
+    ". companyDesc companyDesc companyDesc ."
+    ". h3map h3map h3map ."
+    ". mapa mapa mapa ."
+    ". mapa mapa mapa ."
+    ". mapa mapa mapa ."
+    ". h3mapVisita h3mapVisita h3mapVisita ."
+    ". team team2 . ."
+    ". team team2 . ."
+    ". team3 . . ."
+    ". team3 . . ."
+    "footer footer footer footer footer";
+    width:100%;
+    min-height:100vh;
+    height:auto;
+    gap:10px;
+}
+
+#map { 
+grid-area: mapa;
+height: 300px; 
+width: 500px;
+justify-self: flex-start;
+align-self: center ;
+z-index:0;
+
+}
+
+}
+
+@media(max-width:815px){
+    .gridtemplateAbout{
+    display:grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: repeat(17, min-content);
+    grid-template-areas:
+    "navBar navBar navBar"
+    ". companyHead ."
+    ". companyDesc ."
+    ". companyDesc ."
+    ". companyDesc ."
+    ". h3map ."
+    ". mapa ."
+    ". mapa ."
+    ". mapa ."
+    ". h3mapVisita ."
+    ". team ."
+    ". team ."
+    ". team2 ."
+    ". team2 ."
+    ". team3 ."
+    ". team3 ."
+    "footer footer footer";
+    width:100%;
+    min-height:100vh;
+    height:auto;
+    gap:10px;
+}
+
+#map { 
+grid-area: mapa;
+height: 300px; 
+width: 500px;
+justify-self: flex-start;
+align-self: center ;
+z-index:0;
+
+}
+
+.mapContainer{
+    width:500px !important;
+    height:300px !important;
+}
+
+.team1{
+    grid-area: team;
+    justify-self: center;
+}
+
+.team2{
+    grid-area: team2;
+    justify-self: center;
+}
+
+.team3{
+    grid-area: team3;
+    justify-self: center;
+}
+}
+
+@media(max-width:790px){
+
+    .footer{
+    grid-area: footer;
+    align-self: flex-end;
+    justify-self: center;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    "socialNetworks"
+    "address"
+    "copyright";
+    background-color:#292966;
+    color:white;
+    width:100%;
+    padding-top:20px;
+    padding-bottom:20px;
+    position:sticky;
+    bottom:0;
+    gap:10px;
+}
+
+.footer img{
+    width:20px;
+    height:20px;
+}
+
+.footer img:hover{
+    transform:scale(1.1);
+}
+
+.footer li > a{
+    margin:0;
+    padding:0;
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.listaBotonesFooter{
+    grid-area:socialNetworks;
+    padding:0px;
+    margin:0px;
+    list-style:none;
+    list-style-type: none;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+    width:100%;
+}
+
+.copyrightUL{
+    grid-area: copyright;
+    padding:0px;
+    margin:0;
+    list-style:none;
+    list-style-type: none;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+}
+
+.copyrightUL li,p{
+    margin:0;
+}
+
+.copyrightUL p{
+    font-size: smaller;
+}
+
+
+.addressUL{
+    grid-area: address;
+    padding:0px;
+    margin:0;
+    list-style:none;
+    list-style-type: none;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+}
+
+.addressUL address{
+    font-size: smaller;
+}
+
+
+}
+
+@media(max-width:640px){
+
+    .gridtemplateProyects{
+    display:grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+    "navBar navBar navBar"
+    ". search ."
+    ". gallery ."
+    "footer footer footer";
+    width:100%;
+    min-height:100vh;
+    height: auto;
+    gap:10px;
+}
+
+.galleryGrid{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, auto);
+    grid-template-areas:
+    "fImg1"
+    "fImg2"
+    "fImg3"
+    "fImg4"
+    "fImg5"
+    "fImg6"
+    "fImg7"
+    "fImg8"
+    "fImg9";
+    width:100%;
+    height:auto;
+    gap:10px;
+    grid-area: gallery;
+}
+
+.cardHeading {
+    width:100%;
+    padding:10px;
+    border-bottom: solid 1px black;
+    background-color:#CCCCFF;
+    font-size:smaller;
+}
+
+.cardHeading h3{
+    text-align: center;
+}
+
+.cardText{
+    width:100%;
+    padding:10px;
+    background-color:#5C5C99;
+    color:white;
+    font-size: smaller;
+}
+
+.gridtemplate{
+    display:grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: repeat(11, min-content);
+    grid-template-areas:
+    "navBar navBar navBar"
+    ". encabezado1 ."
+    ". carousel ."
+    ". encabezado2 ."
+    ". p1 ."
+    ". encabezado2b ."
+    ". p2 ."
+    ". atributos ." 
+    ". atributos3 ."
+    ". atributos2 ."
+    "footer footer footer";
+    width:100%;
+    min-height:100vh;
+    height:auto;
+    gap:10px;
+}
+
+.carouselSwiperSlide{
+    width:300px;
+    height:200px;
+}
+
+.carouselSwiper{
+    width:300px;
+}
+
+.carousel{
+    width:300px;
+    height:200px;
+}
+
+.atributos, .atributos2, .atributos3 {
+    font-size:smaller;
+}
+
+.encabezado1{
+    grid-area: encabezado1;
+    text-align:center;
+    font-size:smaller;
+}
+
+.encabezado2{
+    grid-area: encabezado2;
+    align-self:center;
+    justify-self:flex-start;
+    font-size:smaller;
+}
+
+.encabezado2b{
+    grid-area: encabezado2b;
+    align-self:center;
+    justify-self:flex-start;
+    font-size:smaller;
+}
+
+.p1{
+    grid-area:p1;
+    align-self:flex-start;
+    justify-self: flex-start;
+    margin:0;
+    font-size:smaller;
+}
+
+.p2{
+    grid-area:p2;
+    align-self:flex-start;
+    justify-self: flex-start;
+    margin:0;
+    font-size:smaller;
+}
+
+.carouselgrid{
+    grid-area: carousel;
+    justify-self:center;
+    align-self: flex-start;
+}
+
+
+.gridtemplateAbout{
+    display:grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: repeat(17, min-content);
+    grid-template-areas:
+    "navBar navBar navBar"
+    ". companyHead ."
+    ". companyDesc ."
+    ". companyDesc ."
+    ". companyDesc ."
+    ". h3map ."
+    ". mapa ."
+    ". mapa ."
+    ". mapa ."
+    ". h3mapVisita ."
+    ". team ."
+    ". team ."
+    ". team2 ."
+    ". team2 ."
+    ". team3 ."
+    ". team3 ."
+    "footer footer footer";
+    width:100%;
+    min-height:100vh;
+    height:auto;
+    gap:10px;
+}
+
+#map { 
+grid-area: mapa;
+height: 200px; 
+width: 300px;
+justify-self: center;
+align-self: center;
+z-index:0;
+
+}
+
+.mapContainer{
+    width:300px !important;
+    height:200px !important;
+}
+
+.companyHeading{
+    grid-area: companyHead;
+    font-size: smaller;
+}
+
+.companyDescription{
+    grid-area: companyDesc;
+    align-self: flex-start;
+    font-size:smaller;
+    margin: 0;
+}
+
+.h3map{
+    font-size: smaller;
+}
+
+.h3mapVisita h3,p{
+font-size: smaller;
+}
+
+.team1{
+    grid-area: team;
+    justify-self: center;
+}
+
+.team2{
+    grid-area: team2;
+    justify-self: center;
+}
+
+.team3{
+    grid-area: team3;
+    justify-self: center;
+}
+
+.gridtemplateContact{
+    display:grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: min-content auto min-content;
+    grid-template-areas:
+    "navBar navBar navBar"
+    ". formulario ."
+    "footer footer footer";
+    width:100%;
+    min-height:100vh;
+    height:auto;
+    gap:10px;
+}
+
+#formulario textarea{
+  width: 100%;   
+  height: 80px;     
+  resize: none;      
+  overflow: auto;   
+  margin-bottom:10px; 
+}
+
+#formulario input{
+    width:260px;
+}
+
+}
