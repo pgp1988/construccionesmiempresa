@@ -25,9 +25,9 @@ export const QuienesSomos = () => {
           laudantium corporis non explicabo magni ipsa, pariatur suscipit error
           eligendi!
         </p>
-        <img src="/assets/images/equipo.jpg" alt="equipo de trabajo" style={{width:"300px"}} className="team1" />
-        <img src="/assets/images/equipo2.jpg" alt="otra imagen del equipo" style={{width:"300px"}} className="team2" />
-        <img src="/assets/images/equipo3.jpg" alt="una imagen más del equipo" style={{width:"300px"}} className="team3" />
+        <img src={`${process.env.PUBLIC_URL}/assets/images/equipo.jpg`} alt="equipo de trabajo" style={{width:"300px"}} className="team1" />
+        <img src={`${process.env.PUBLIC_URL}/assets/images/equipo2.jpg`} alt="otra imagen del equipo" style={{width:"300px"}} className="team2" />
+        <img src={`${process.env.PUBLIC_URL}/assets/images/equipo3.jpg`} alt="una imagen más del equipo" style={{width:"300px"}} className="team3" />
         <h3 className="h3map">Puedes encontrarnos en el mapa:</h3>
         <Geolocalizacion />
         <div className="h3mapVisita"><h3>Visítanos en la siguiente dirección:</h3><p>

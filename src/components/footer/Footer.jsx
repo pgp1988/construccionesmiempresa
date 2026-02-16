@@ -16,7 +16,7 @@ export const Footer = () => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <img src="/assets/images/linkedin.png" alt="linkedin icon" />
+              <img src={`${process.env.PUBLIC_URL}/assets/images/linkedin.png`} alt="linkedin icon" />
             </a>
           </li>
           <li>
@@ -25,7 +25,7 @@ export const Footer = () => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <img src="/assets/images/x.png" alt="x icon" />
+              <img src={`${process.env.PUBLIC_URL}/assets/images/x.png`} alt="x icon" />
             </a>
           </li>
           <li>
@@ -34,7 +34,7 @@ export const Footer = () => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <img src="/assets/images/instagram.png" alt="instagram icon" />
+              <img src={`${process.env.PUBLIC_URL}/assets/images/instagram.png`} alt="instagram icon" />
             </a>
           </li>
           <li>
@@ -43,7 +43,7 @@ export const Footer = () => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <img src="/assets/images/facebook.png" alt="facebook icon" />
+              <img src={`${process.env.PUBLIC_URL}/assets/images/facebook.png`} alt="facebook icon" />
             </a>
           </li>
         </ul>
